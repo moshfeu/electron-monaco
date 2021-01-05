@@ -1063,7 +1063,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.0", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
   integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
@@ -1349,6 +1349,14 @@
   integrity sha512-GeIK5rfU1Yd7BZJQPTGZMMmcZy5nhRToPXZcjaDwQDRSewdhp648GT2E4dh+L7+Io7AOW6WQ+GR44QSzja4qxg==
   dependencies:
     cross-spawn "^7.0.1"
+
+"@monaco-editor/react@^3.7.5":
+  version "3.7.5"
+  resolved "https://registry.yarnpkg.com/@monaco-editor/react/-/react-3.7.5.tgz#79b920296202aa970989c2c613778db249e675aa"
+  integrity sha512-rD6uK7zPuJq/xLv6QN+Qdk51wywXWSKhYeGjObultnsCsnp3FKaHY3O4pqjsss46SDZDG9IB/V3nymdMz1lFSg==
+  dependencies:
+    "@babel/runtime" "^7.11.0"
+    state-local "^1.0.1"
 
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
@@ -7910,6 +7918,11 @@ mkdirp@^1.0.3, mkdirp@^1.0.4:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
 
+monaco-editor@^0.21.2:
+  version "0.21.2"
+  resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.21.2.tgz#37054e63e480d51a2dd17d609dcfb192304d5605"
+  integrity sha512-jS51RLuzMaoJpYbu7F6TPuWpnWTLD4kjRW0+AZzcryvbxrTwhNy1KC9yboyKpgMTahpUbDUsuQULoo0GV1EPqg==
+
 moo@^0.5.0:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/moo/-/moo-0.5.1.tgz#7aae7f384b9b09f620b6abf6f74ebbcd1b65dbc4"
@@ -10546,6 +10559,11 @@ stat-mode@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/stat-mode/-/stat-mode-1.0.0.tgz#68b55cb61ea639ff57136f36b216a291800d1465"
   integrity sha512-jH9EhtKIjuXZ2cWxmXS8ZP80XyC3iasQxMDV8jzhNJpfDb7VbQLVW4Wvsxz9QZvzV+G4YoSfBUVKDOyxLzi/sg==
+
+state-local@^1.0.1:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/state-local/-/state-local-1.0.6.tgz#137088a941d361a0f11829965b2f46ec7e9968b4"
+  integrity sha512-+IlgkKVNVmGwt9fqBaU76y/Fvj0fuQGDQESnFBD9kVW6T0/HtDyRXeDXmEba3dOMfMufZC6PuKO9eQ9pKJtmiA==
 
 static-extend@^0.1.1:
   version "0.1.2"

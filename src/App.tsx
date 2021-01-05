@@ -1,50 +1,37 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import icon from '../assets/icon.svg';
+import Editor, { monaco } from '@monaco-editor/react';
+import path from 'path';
 
-const Hello = () => {
-  return (
-    <div>
-      <div className="Hello">
-        <img width="200px" alt="icon" src={icon} />
-      </div>
-      <h1>electron-react-boilerplate</h1>
-      <div className="Hello">
-        <a
-          href="https://electron-react-boilerplate.js.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              📚
-            </span>
-            Read our docs
-          </button>
-        </a>
-        <a
-          href="https://github.com/sponsors/electron-react-boilerplate"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              🙏
-            </span>
-            Donate
-          </button>
-        </a>
-      </div>
-    </div>
-  );
-};
+function ensureFirstBackSlash(str: string) {
+  return str.length > 0 && str.charAt(0) !== '/' ? `/${str}` : str;
+}
+
+function uriFromPath(_path: string) {
+  const pathName = path.resolve(_path).replace(/\\/g, '/');
+  return encodeURI(`file://${ensureFirstBackSlash(pathName)}`);
+}
+
+monaco.config({
+  paths: {
+    vs: uriFromPath(
+      path.join(__dirname, '../node_modules/monaco-editor/min/vs')
+    ),
+  },
+});
+
+const value = `function itsWorking() {
+  console.log('yahhhh!');
+}`;
 
 export default function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" component={Hello} />
-      </Switch>
-    </Router>
+    <div>
+      <Editor
+        width="100vw"
+        height="100vh"
+        language="javascript"
+        value={value}
+      />
+    </div>
   );
 }
